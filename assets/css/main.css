@@ -236,6 +236,18 @@ h6 {
   transition: all 0.5s;
   z-index: 997;
 }
+.header-btn {
+    white-space: nowrap;       /* keep text in one line */
+    padding: 10px 18px;        /* adjust spacing */
+    font-size: 14px;           /* optional: reduce font size for mobile */
+}
+
+@media (max-width: 480px) {
+    .header-btn {
+        padding: 8px 14px;     /* tighter padding for small screens */
+        font-size: 13px;
+    }
+}
 
 .header .logo {
   line-height: 1;
