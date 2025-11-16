@@ -242,6 +242,22 @@ h6 {
     font-size: 14px;           /* optional: reduce font size for mobile */
 }
 
+.header-btn,
+.header-btn a {
+    white-space: nowrap !important;
+}
+
+@media (max-width: 480px) {
+    .header-btn {
+        padding: 6px 10px !important;
+        font-size: 13px !important;
+    }
+    .header-btn a {
+        font-size: 13px !important;
+    }
+}
+
+
 @media (max-width: 480px) {
     .header-btn {
         padding: 8px 14px;     /* tighter padding for small screens */
