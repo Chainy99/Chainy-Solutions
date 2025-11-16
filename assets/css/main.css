@@ -66,6 +66,11 @@ body {
   background-color: var(--background-color);
   font-family: var(--default-font);
 }
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;   /* stop sideways scroll */
+}
+
 
 a {
   color: var(--accent-color);
@@ -537,7 +542,94 @@ h6 {
   background-color: var(--background-color);
   font-size: 14px;
   position: relative;
+  
 }
+.footer-about,
+.footer-links,
+.footer-contact {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .footer-about,
+  .footer-links {
+    text-align: left;
+  }
+}
+.footer .footer-top {
+  padding: 30px 0;
+}
+
+.footer .footer-links ul {
+  padding-left: 0;
+}
+
+.footer .footer-links ul li {
+  margin-bottom: 8px;
+  list-style: none;
+}
+/* ===== Footer layout for MOBILE ONLY ===== */
+@media (max-width: 767.98px) {
+
+  /* About + Contact = full width, centered */
+  #footer .footer-about,
+  #footer .footer-contact {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  /* Quick Links + Join Innovoo = 2 columns in same row */
+  #footer .footer-links {
+    flex: 0 0 50%;
+    max-width: 50%;
+    text-align: center;        /* center headings */
+  }
+
+  /* Footer row spacing */
+  #footer .footer-top .row {
+    row-gap: 20px;
+  }
+
+  /* Lists look clean on mobile */
+  #footer .footer-links ul {
+    padding-left: 0;
+    margin-bottom: 0;
+    display: inline-block;     /* so items align nicely under heading */
+    text-align: left;          /* list items left aligned */
+  }
+
+  #footer .footer-links ul li {
+    list-style: none;
+    margin-bottom: 6px;
+  }
+
+  /* Center social icons under description */
+  #footer .social-links {
+    justify-content: center;
+  }
+}
+
+/* Tablet & desktop – keep the original left alignment */
+@media (min-width: 768px) {
+  #footer .footer-about,
+  #footer .footer-links,
+  #footer .footer-contact {
+    text-align: left;
+  }
+}
+@media (max-width: 767.98px) {
+    /* your other mobile footer code... */
+
+    /* CENTER Innovoo Solutions title ONLY on mobile */
+    #footer .footer-about h4,
+    #footer .footer-about h3,
+    #footer .footer-about .sitename {
+        text-align: center !important;
+        width: 100%;
+    }
+}
+
 
 .footer .footer-top {
   padding-top: 50px;
@@ -2077,3 +2169,4 @@ section,
 .whatsapp-float:hover {
   background-color: #1ebe5d;
 }
+
